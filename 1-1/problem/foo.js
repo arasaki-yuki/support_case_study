@@ -20,7 +20,7 @@
         if (secondaryClassName === 'ad1') {
           $(ad).html('<div class="adInsert"></div>');
           const bar = document.createElement('script');
-          bar.src = 'bar.j';
+          bar.src = 'ad.j';
           ad.insertAdjacentElement('beforeend', bar);
         } else {
           $(ad).html('<script>write();</script>');
