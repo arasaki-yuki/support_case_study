@@ -15,9 +15,14 @@ function callback(entries, object) {
       if (!entry.isIntersecting) return;
 
       const ad = entry.target;
-      $(ad).html('<script src="ad.js"></script>');
-      $(ad).html('<div class="adInsert"></div><script src="ad-async.js"></script>');
+      $(ad).html('<script>renderAd();</script>');
+      // $(ad).html('<div class="adInsert"></div><script src="ad-async.js"></script>');
 
       object.unobserve(ad);
   });
 };
+
+
+const script = document.createElement('script');
+script.src="ad.js";
+document.head.insertAdjacentElement('beforeend', script);

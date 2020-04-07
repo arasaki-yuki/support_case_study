@@ -15,4 +15,7 @@ const html = `
     自宅待機しているこんな時だから。
   </div>
 `;
-document.write(html);
+
+function renderAd () {
+  document.write(html);
+}
