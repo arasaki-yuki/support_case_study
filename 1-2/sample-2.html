@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iframeを動的に作る例</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    h1 {
+      color: salmon;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <h1>h1のTitle</h1>
+  <script>
+    const app = document.querySelector('#app');
+    const iframe = document.createElement('iframe');
+    app.appendChild(iframe);
+
+    const doc = iframe.contentWindow.document;
+
+    const html = `
+      <div>hoge</div>
+      <div>hoge</div>
+      <div>hoge</div>
+    `;
+
+    doc.open();
+    doc.write(html);
+    doc.close();
+    
+  </script>
+</body>
+</html>
