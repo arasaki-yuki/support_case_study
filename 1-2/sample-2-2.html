@@ -47,7 +47,7 @@
      * iframeからdivのテキスストを読み込みConsoleに出す
      */
     const targetIframe = document.querySelector('#app iframe');
-    targetDoc = targetIframe.contentWindow.document;
+    const targetDoc = targetIframe.contentWindow.document;
     const divText = targetDoc.querySelector('div').textContent;
     app.insertAdjacentHTML('afterend', `<div>iframe内にあったdivのテキスト<br>: 「${divText}」</div>`);
   </script>
