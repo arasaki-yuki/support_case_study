@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iframeを動的に作る例</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    h1 {
+      color: salmon;
+    }
+  </style>
+</head>
+<body>
+  <h1>h1のTitle</h1>
+  <div id="app"></div>
+  <script>
+    const app = document.querySelector('#app');
+    const iframe = document.createElement('iframe');
+    app.appendChild(iframe);
+
+    const doc = iframe.contentWindow.document;
+
+    const html = `
+      <div>hoge</div>
+      <div>hoge</div>
+      <div>hoge</div>
+      <script>
+      /**
+       * フレーム -> TOP
+       * TOPウィンドウからh1のテキストを読み込み書き出す
+       */
+      const topTitle = window.top.document.querySelector('h1').textContent;
+      document.write('TOP windowから取得したtitle:<br>「' + topTitle + '」')
+      <\/script>
+    `;
+
+    doc.open();
+    doc.write(html);
+    doc.close();
+
+
+    /**
+     * TOP -> フレーム
+     * iframeからdivのテキスストを読み込みConsoleに出す
+     */
+    const targetIframe = document.querySelector('#app iframe');
+    targetDoc = targetIframe.contentWindow.document;
+    const divText = targetDoc.querySelector('div').textContent;
+    app.insertAdjacentHTML('afterend', `<div>iframe内にあったdivのテキスト<br>: 「${divText}」</div>`);
+  </script>
+</body>
+</html>
