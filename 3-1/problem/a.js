@@ -4,10 +4,6 @@ const random = function() {
   return Math.floor(Math.random() * max + 1);
 };
 
-console.log(random());
-console.log(random());
-console.log(random());
-
 let flg1 = random() === 1;
 let flg2 = random() === 2;
 let flg3 = random() === 3;
@@ -34,5 +30,4 @@ const someFunc = function(el) {
 
 if (flg1 && flg2 && flg3) {
   someFunc(ad);
-} else {
 }
