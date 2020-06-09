@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>sample-2</title>
+  <style>
+    div {
+      font-size: 26px;
+    }
+  </style>
+</head>
+<body>
+<div id="a">a</div>
+<div id="b">b</div>
+<div id="c">c</div>
+<script>
+var a  = document.querySelector('#a');
+a.style.color = 'red';
+
+var b  = document.querySelector('#b');
+changeToPink(b);
+
+var c  = document.querySelector('#c');
+c.style.color = 'green'
+
+function changeToPink(target) {
+  if (target) {
+    target.style.color = 'pink';
+  }
+}
+</script>
+</body>
+</html>
