@@ -23,8 +23,8 @@
 
   /* ここは関係ない */
   window.frameElement.style.width = '100%';
-  window.frameElement.style.height = '1000px';
+  window.frameElement.style.height = '300px';
   window.frameElement.parentNode.style.width = '100%';
-  window.frameElement.parentNode.style.height = '1000px';
+  window.frameElement.parentNode.style.height = '300px';
   /* ここは関係ない */
 })();
