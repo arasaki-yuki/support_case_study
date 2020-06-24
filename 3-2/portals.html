@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+  <style>
+    #ad {
+      display: inline-block;
+      cursor: pointer;
+    }
+    #here {
+      height: 100%;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!--Call your modal-->
+  <a id="ad" href="#animatedModal"></a>
+
+  <div id="animatedModal">
+      <div id="here" class="modal-content"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animatedmodal@1.0.0/animatedModal.min.js"></script>
+  <script src="portals.js" async></script>
+</body>
+</html>
